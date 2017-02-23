@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>John's Crystals Collector Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -17,30 +17,41 @@
 
   <div class="game-info">
         <p>You will be given a random number at the start of the game.</p>
+        <br>
         <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <br>
         <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <br>
         <p>The value of each crystal is hidden from you until you click on it.</p>
+        <br>
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
   </div>      
 
-<!--         <p>Current Word</p>
-      <span id="currWord"></span>https://uclax.bootcampcontent.com/UCLA-Coding-Boot-Camp/01-17-Class-Content/raw/master/Homeworks/homework-4_Intro-jQuery/Instructions/Images/1-CrystalCollector.jpg
+  <div class="gameStats">
+    <div class="goalBox"> 
+       <span id="goalNum"></span>
+    </div>
+    <div class="winBox">
+      <p>Wins: <span id="gamesWon"></span></p>
       <br>
-      
-      <p>Letters guessed: <span id="triedLetters"></span></p> 
-          
-      <p>Guesses Remaining: <span id="guessesLeft"></span></p>
-      
-      <p>Wins: <span id="gamesWon"></span> out of <span id="totGames"></span></p>
-       -->      
-<!-- reserve a place to put win or lose msg/images -->
+      <p>Losses: <span id="gamesLost"></span></p>
+    </div>   
+  </div>
+  
+  <div class="gemButtons">
+    <img src="assets/images/redGem.jpg" class=gemImage id="buttOne" alt="Red Gem">
+    <img src="assets/images/blueGem.jpg" class=gemImage id="buttTwo" alt="Blue Gem">
+    <img src="assets/images/violetGem.jpg" class=gemImage id="buttThree" alt="Violet Gem">
+    <img src="assets/images/greenGem.jpg" class=gemImage id="buttFour" alt="Green Gem">
+  </div>
 
-      <div id="winLoseBox" class="col-xs-4 col-md-6 col-lg-7">
-        <img id="winLoseImg" src="assets/images/win.jpg">
-        <h2 id="winLose">You win!</h2>
-      </div>
+  <div class="scoreBox">
+    <h2>Your total score is:</h2>
+      <span id="tallyNum"></span>
+  </div>
 
-<script src="assets/javascript/game.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>
