@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 /* generate random number between 19 and 120 */
-	var goalScore = Math.floor((Math.random() * 102) + 19);
+	var goalScore = Math.floor((Math.random() * 101) + 19);
     $('#goalNum').text(goalScore);
 
 /* generate random number for each gem between 1 and 12 */
@@ -17,6 +17,7 @@ $(document).ready(function() {
 
     $('#gamesWon').text(totWins);
     $('#gamesLost').text(totLoss);
+    $('#tallyNum').text(userAccum);
 
 /* reset variables for a new game */
     function newGame() {
@@ -31,12 +32,14 @@ $(document).ready(function() {
     };
 
 	function gameWon() {
+		$('#gameStat').text("You win!");
 		totWins++
 		$('#gamesWon').text(totWins);
 		newGame();
 	};
  
 	function gameLost() {
+		$('#gameStat').text("You lose!");
 		totLoss++
 		$('#gamesLost').text(totLoss);
 		newGame();

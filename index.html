@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>John's Crystals Collector Game</title>
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -26,28 +25,32 @@
         <br>
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
   </div>      
-
+<!-- Show the goal number and Win/loss counts -->
   <div class="gameStats">
     <div class="goalBox"> 
        <span id="goalNum"></span>
     </div>
     <div class="winBox">
+      <p><span id="gameStat"></span></p>
       <p>Wins: <span id="gamesWon"></span></p>
-      <br>
       <p>Losses: <span id="gamesLost"></span></p>
     </div>   
   </div>
-  
+<!-- Four buttons made of images of Gems. -->
   <div class="gemButtons">
     <img src="assets/images/redGem.jpg" class=gemImage id="buttOne" alt="Red Gem">
     <img src="assets/images/blueGem.jpg" class=gemImage id="buttTwo" alt="Blue Gem">
     <img src="assets/images/violetGem.jpg" class=gemImage id="buttThree" alt="Violet Gem">
     <img src="assets/images/greenGem.jpg" class=gemImage id="buttFour" alt="Green Gem">
   </div>
-
+<!-- Show the accumulated tally of clicked-gem values. -->
   <div class="scoreBox">
-    <h2>Your total score is:</h2>
-      <span id="tallyNum"></span>
+    <div class="totalLit">
+      <h2>Your total score is:</h2>
+    </div>
+    <div class="tallyBox">
+      <p><span id="tallyNum"></span></p>
+    </div>  
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
